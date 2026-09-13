@@ -1,9 +1,12 @@
 node_modules
 .next
 .git
-.env*.local
+.vscode
+.env
+docs
+
+// Logger files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.DS_Store
-docs
+
