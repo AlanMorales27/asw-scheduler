@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint --config config/eslint.config.mjs",
+    "db:generate": "prisma generate --config config/prisma.config.ts",
+    "db:push": "prisma db push --config config/prisma.config.ts",
+    "db:migrate": "prisma migrate deploy --config config/prisma.config.ts"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",

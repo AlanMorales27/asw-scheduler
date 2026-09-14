@@ -12,9 +12,9 @@ RUN npm ci
 # Run database migrations
 #
 FROM deps AS migrator
+COPY config ./config
 COPY prisma ./prisma
-COPY prisma.config.ts ./
-CMD ["npx", "prisma", "migrate", "deploy"]
+CMD ["npx", "prisma", "migrate", "deploy", "--config", "config/prisma.config.ts"]
 
 #
 # Build the application for production
@@ -25,7 +25,7 @@ COPY . .
 # Dummy value to avoid Prisma error when building the app.
 ENV DIRECT_URL=postgresql://placeholder:placeholder@localhost:5432/placeholder  
 
-RUN npx prisma generate
+RUN npx prisma generate --config config/prisma.config.ts
 RUN npm run lint
 RUN npm run build
 

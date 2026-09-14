@@ -3,6 +3,7 @@
         "jonathanharty.gruvbox-material-icon-theme",
         "nettrash.md-vscode",
         "prisma.prisma",
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-containers"
     ]
 }
