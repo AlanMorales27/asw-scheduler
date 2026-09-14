@@ -25,4 +25,3 @@ services:
       - ../prisma:/app/prisma
     profiles:
       - tools
-    command: npx prisma migrate deploy
