@@ -2,11 +2,14 @@ node_modules
 .next
 .git
 .vscode
+.opencode
+
 .env
+.env.*
+src/generated
 docs
 
-// Logger files
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
