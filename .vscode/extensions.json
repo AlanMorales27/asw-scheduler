@@ -1,6 +1,9 @@
 {
     "recommendations": [
         "jonathanharty.gruvbox-material-icon-theme",
-        "nettrash.md-vscode"
+        "nettrash.md-vscode",
+        "prisma.prisma",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-containers"
     ]
 }

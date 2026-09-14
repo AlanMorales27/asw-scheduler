@@ -1,0 +1,30 @@
+name: asw-scheduler
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: runner
+    container_name: asw-scheduler
+    ports:
+      - "3000:3000"
+    env_file:
+      - ../.env
+    restart: unless-stopped
+
+  # For running migrations, you can use the following command:
+  # `docker compose run --rm migrate` 
+  #
+  # For create a new migration, you can use the following command:
+  # `npm run db:deploy`
+  migrate:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: migrator
+    env_file:
+      - ../.env
+    volumes:
+      - ../prisma:/app/prisma
+    profiles:
+      - tools

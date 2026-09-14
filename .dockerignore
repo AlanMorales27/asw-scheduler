@@ -1,9 +1,15 @@
 node_modules
 .next
 .git
-.env*.local
+.vscode
+.opencode
+
+.env
+.env.*
+src/generated
+docs
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.DS_Store
-docs
