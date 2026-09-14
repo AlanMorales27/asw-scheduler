@@ -8,11 +8,10 @@
     "start": "next start",
     "lint": "eslint --config config/eslint.config.mjs",
 
-    "db:generate":    "prisma generate --config config/prisma.config.ts",
-    "db:push":        "prisma db push --config config/prisma.config.ts",
-    "db:migrate:dev": "prisma migrate dev --config config/prisma.config.ts",
-    "db:migrate":     "prisma migrate deploy --config config/prisma.config.ts",
-    "db:status":      "prisma migrate status --config config/prisma.config.ts"
+    "db:generate": "prisma generate --config config/prisma.config.ts",
+    "db:deploy":   "prisma migrate dev --config config/prisma.config.ts",
+    "db:migrate":  "prisma migrate deploy --config config/prisma.config.ts",
+    "db:reset":    "prisma migrate reset --config config/prisma.config.ts"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",

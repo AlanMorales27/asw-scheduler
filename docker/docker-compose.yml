@@ -16,7 +16,7 @@ services:
   # `docker compose run --rm migrate` 
   #
   # For create a new migration, you can use the following command:
-  # `npm run db:migrate:dev -- --name name`
+  # `npm run db:deploy`
   migrate:
     build:
       context: ..
