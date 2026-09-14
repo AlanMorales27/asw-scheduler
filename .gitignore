@@ -1,1 +1,9 @@
-.env
+/node_modules
+/src/generated/prisma
+/.next/
+
+next-env.d.ts
+npm-debug.log*
+
+.env*
+!.env.example
