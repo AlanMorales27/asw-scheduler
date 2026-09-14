@@ -13,7 +13,10 @@ services:
     restart: unless-stopped
 
   # For running migrations, you can use the following command:
-  # `docker compose run --rm migrate`
+  # `docker compose run --rm migrate` 
+  #
+  # For create a new migration, you can use the following command:
+  # `npm run db:migrate:dev -- --name name`
   migrate:
     build:
       context: ..
